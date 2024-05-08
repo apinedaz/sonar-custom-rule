@@ -1,0 +1,3 @@
+org\sonar\samples\java\checks\AvoidBrandInMethodNamesRule.class
+org\sonar\samples\java\utils\StringUtils.class
+org\sonar\samples\java\RulesList.class
