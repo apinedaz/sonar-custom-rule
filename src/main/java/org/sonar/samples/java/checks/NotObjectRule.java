@@ -7,17 +7,17 @@ package org.sonar.samples.java.checks;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
-import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
-import org.sonar.plugins.java.api.tree.MethodTree;
-import org.sonar.plugins.java.api.tree.ParameterizedTypeTree;
+import org.sonar.plugins.java.api.semantic.Symbol;
+import org.sonar.plugins.java.api.semantic.Type;
+import org.sonar.plugins.java.api.tree.*;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.plugins.java.api.tree.TypeTree;
-
+import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 
 @Rule(key = "NotObject")
 public class NotObjectRule extends BaseTreeVisitor implements JavaFileScanner {
 
   private JavaFileScannerContext context;
+
   @Override
   public void scanFile(JavaFileScannerContext context) {
     this.context = context;
@@ -27,18 +27,41 @@ public class NotObjectRule extends BaseTreeVisitor implements JavaFileScanner {
   @Override
   public void visitMethod(MethodTree tree) {
     super.visitMethod(tree);
+    // Check if the method returns ResponseEntity<Object>
     TypeTree returnType = tree.returnType();
     if (returnType != null && returnType.is(Kind.PARAMETERIZED_TYPE)) {
-      ParameterizedTypeTree parameterizedType = (ParameterizedTypeTree) returnType;
-      if (parameterizedType.symbolType().is("org.springframework.http.ResponseEntity") &&
-        parameterizedType.typeArguments().size() == 1&&
-        parameterizedType.typeArguments().get(0).symbolType().is("java.lang.Object")) {
-        /*for (int i = 0; i < parameterizedType.typeArguments().size(); i++) {
-          //if (typeA.symbolType().is("java.lang.Object")
-        }*/
-          context.reportIssue(this,tree.simpleName(),(((ParameterizedTypeTree) parameterizedType.typeArguments().get(0)).symbolType())+"");
+      ParameterizedTypeTree paramType = (ParameterizedTypeTree) returnType;
+      if (isResponseEntityObject(paramType)) {
+        reportIssue(returnType, "Avoid using ResponseEntity<Object> as return type.");
       }
     }
+  }
 
+  private boolean isResponseEntityObject(ParameterizedTypeTree paramType) {
+    // Check if the type is ResponseEntity<Object>
+    if (paramType.type().is(Kind.IDENTIFIER)) {
+      IdentifierTree identifier = (IdentifierTree) paramType.type();
+      if ("ResponseEntity".equals(identifier.name())) {
+        if (paramType.typeArguments().size() == 1 && isObjectType(paramType.typeArguments().get(0))) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  private boolean isObjectType(Tree tree) {
+    if (tree.is(Kind.IDENTIFIER)) {
+      Symbol symbol = ((IdentifierTree) tree).symbol();
+      if (symbol != null) {
+        Type type = symbol.type();
+        return type.is("java.lang.Object");
+      }
+    }
+    return false;
+  }
+
+  private void reportIssue(Tree tree, String message) {
+    context.reportIssue(this, tree, message);
   }
 }
