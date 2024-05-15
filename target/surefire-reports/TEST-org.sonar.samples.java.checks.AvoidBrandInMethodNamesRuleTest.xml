@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.sonar.samples.java.checks.AvoidBrandInMethodNamesRuleTest" time="0.16" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\anfep\Downloads\sonar-java-7.16.0.30901\sonar-java-7.16.0.30901\docs\java-custom-rules-example\target\test-classes;C:\Users\anfep\Downloads\sonar-java-7.16.0.30901\sonar-java-7.16.0.30901\docs\java-custom-rules-example\target\classes;C:\Users\anfep\.m2\repository\org\sonarsource\sonarqube\sonar-plugin-api\8.9.0.43852\sonar-plugin-api-8.9.0.43852.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\sonar-java-plugin\6.15.1.26025\sonar-java-plugin-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-surefire\6.15.1.26025\java-surefire-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\com\fasterxml\staxmate\staxmate\2.4.0\staxmate-2.4.0.jar;C:\Users\anfep\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-frontend\6.15.1.26025\java-frontend-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\jdt\6.15.1.26025\jdt-6.15.1.26025-shaded.jar;C:\Users\anfep\.m2\repository\org\eclipse\jdt\org.eclipse.jdt.core\3.25.0\org.eclipse.jdt.core-3.25.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.resources\3.20.100\org.eclipse.core.resources-3.20.100.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.osgi\3.19.0\org.eclipse.osgi-3.19.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.runtime\3.31.0\org.eclipse.core.runtime-3.31.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.equinox.common\3.19.0\org.eclipse.equinox.common-3.19.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.jobs\3.15.200\org.eclipse.core.jobs-3.15.200.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.equinox.preferences\3.11.0\org.eclipse.equinox.preferences-3.11.0.jar;C:\Users\anfep\.m2\repository\org\osgi\org.osgi.service.prefs\1.1.2\org.osgi.service.prefs-1.1.2.jar;C:\Users\anfep\.m2\repository\org\osgi\osgi.annotation\8.0.1\osgi.annotation-8.0.1.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.contenttype\3.9.300\org.eclipse.core.contenttype-3.9.300.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.text\3.14.0\org.eclipse.text-3.14.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.commands\3.12.0\org.eclipse.core.commands-3.12.0.jar;C:\Users\anfep\.m2\repository\org\sonarsource\sslr\sslr-core\1.24.0.633\sslr-core-1.24.0.633.jar;C:\Users\anfep\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-regex-parsing\1.14.1.690\sonar-regex-parsing-1.14.1.690.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-symbolic-execution\6.15.1.26025\java-symbolic-execution-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-checks\6.15.1.26025\java-checks-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-analyzer-recognizers\1.14.1.690\sonar-analyzer-recognizers-1.14.1.690.jar;C:\Users\anfep\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\external-reports\6.15.1.26025\external-reports-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-jsp\6.15.1.26025\java-jsp-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\embed\tomcat-embed-jasper\9.0.33\tomcat-embed-jasper-9.0.33.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.33\tomcat-embed-core-9.0.33.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\tomcat-annotations-api\9.0.33\tomcat-annotations-api-9.0.33.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.33\tomcat-embed-el-9.0.33.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-xml-parsing\1.14.1.690\sonar-xml-parsing-1.14.1.690.jar;C:\Users\anfep\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\anfep\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\anfep\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.2.0\woodstox-core-5.2.0.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-analyzer-commons\1.24.0.965\sonar-analyzer-commons-1.24.0.965.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-checks-testkit\6.15.1.26025\java-checks-testkit-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\anfep\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\anfep\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\anfep\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-migrationsupport\5.7.0\junit-jupiter-migrationsupport-5.7.0.jar;C:\Users\anfep\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\anfep\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\anfep\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\anfep\.m2\repository\org\assertj\assertj-core\3.23.1\assertj-core-3.23.1.jar;C:\Users\anfep\.m2\repository\net\bytebuddy\byte-buddy\1.12.10\byte-buddy-1.12.10.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CO"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\anfep\AppData\Local\Temp\surefire15690879763175650244\surefirebooter-20240514171733438_3.jar C:\Users\anfep\AppData\Local\Temp\surefire15690879763175650244 2024-05-14T17-17-32_953-jvmRun1 surefire-20240514171733438_1tmp surefire_0-20240514171733438_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\anfep\Downloads\sonar-java-7.16.0.30901\sonar-java-7.16.0.30901\docs\java-custom-rules-example\target\test-classes;C:\Users\anfep\Downloads\sonar-java-7.16.0.30901\sonar-java-7.16.0.30901\docs\java-custom-rules-example\target\classes;C:\Users\anfep\.m2\repository\org\sonarsource\sonarqube\sonar-plugin-api\8.9.0.43852\sonar-plugin-api-8.9.0.43852.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\sonar-java-plugin\6.15.1.26025\sonar-java-plugin-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-surefire\6.15.1.26025\java-surefire-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\com\fasterxml\staxmate\staxmate\2.4.0\staxmate-2.4.0.jar;C:\Users\anfep\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-frontend\6.15.1.26025\java-frontend-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\jdt\6.15.1.26025\jdt-6.15.1.26025-shaded.jar;C:\Users\anfep\.m2\repository\org\eclipse\jdt\org.eclipse.jdt.core\3.25.0\org.eclipse.jdt.core-3.25.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.resources\3.20.100\org.eclipse.core.resources-3.20.100.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.osgi\3.19.0\org.eclipse.osgi-3.19.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.runtime\3.31.0\org.eclipse.core.runtime-3.31.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.equinox.common\3.19.0\org.eclipse.equinox.common-3.19.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.jobs\3.15.200\org.eclipse.core.jobs-3.15.200.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.equinox.preferences\3.11.0\org.eclipse.equinox.preferences-3.11.0.jar;C:\Users\anfep\.m2\repository\org\osgi\org.osgi.service.prefs\1.1.2\org.osgi.service.prefs-1.1.2.jar;C:\Users\anfep\.m2\repository\org\osgi\osgi.annotation\8.0.1\osgi.annotation-8.0.1.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.contenttype\3.9.300\org.eclipse.core.contenttype-3.9.300.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.text\3.14.0\org.eclipse.text-3.14.0.jar;C:\Users\anfep\.m2\repository\org\eclipse\platform\org.eclipse.core.commands\3.12.0\org.eclipse.core.commands-3.12.0.jar;C:\Users\anfep\.m2\repository\org\sonarsource\sslr\sslr-core\1.24.0.633\sslr-core-1.24.0.633.jar;C:\Users\anfep\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-regex-parsing\1.14.1.690\sonar-regex-parsing-1.14.1.690.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-symbolic-execution\6.15.1.26025\java-symbolic-execution-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-checks\6.15.1.26025\java-checks-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-analyzer-recognizers\1.14.1.690\sonar-analyzer-recognizers-1.14.1.690.jar;C:\Users\anfep\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\external-reports\6.15.1.26025\external-reports-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-jsp\6.15.1.26025\java-jsp-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\embed\tomcat-embed-jasper\9.0.33\tomcat-embed-jasper-9.0.33.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.33\tomcat-embed-core-9.0.33.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\tomcat-annotations-api\9.0.33\tomcat-annotations-api-9.0.33.jar;C:\Users\anfep\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.33\tomcat-embed-el-9.0.33.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-xml-parsing\1.14.1.690\sonar-xml-parsing-1.14.1.690.jar;C:\Users\anfep\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\anfep\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\anfep\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.2.0\woodstox-core-5.2.0.jar;C:\Users\anfep\.m2\repository\org\sonarsource\analyzer-commons\sonar-analyzer-commons\1.24.0.965\sonar-analyzer-commons-1.24.0.965.jar;C:\Users\anfep\.m2\repository\org\sonarsource\java\java-checks-testkit\6.15.1.26025\java-checks-testkit-6.15.1.26025.jar;C:\Users\anfep\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\anfep\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\anfep\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\anfep\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\anfep\.m2\repository\org\junit\jupiter\junit-jupiter-migrationsupport\5.7.0\junit-jupiter-migrationsupport-5.7.0.jar;C:\Users\anfep\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\anfep\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\anfep\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\anfep\.m2\repository\org\assertj\assertj-core\3.23.1\assertj-core-3.23.1.jar;C:\Users\anfep\.m2\repository\net\bytebuddy\byte-buddy\1.12.10\byte-buddy-1.12.10.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\anfep"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\anfep\Downloads\sonar-java-7.16.0.30901\sonar-java-7.16.0.30901\docs\java-custom-rules-example"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\anfep\AppData\Local\Temp\surefire15690879763175650244\surefirebooter-20240514171733438_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.3+7-LTS-152"/>
+    <property name="user.name" value="anfep"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\anfep\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\anfep\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.3"/>
+    <property name="user.dir" value="C:\Users\anfep\Downloads\sonar-java-7.16.0.30901\sonar-java-7.16.0.30901\docs\java-custom-rules-example"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Calibre2\;C:\apache-maven-3.9.5\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\PuTTY\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files (x86)\Pandoc\;C:\Program Files\Pandoc\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\anfep\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\anfep\AppData\Local\Programs\Python\Python311\;C:\Users\anfep\AppData\Local\Microsoft\WindowsApps;C:\Users\anfep\AppData\Roaming\npm;C:\Users\anfep\AppData\Roaming\Composer\vendor\bin;C:\Program Files\heroku\bin;C:\apache-maven-3.9.5\bin;C:\Users\anfep\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.3+7-LTS-152"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="detected" classname="org.sonar.samples.java.checks.AvoidBrandInMethodNamesRuleTest" time="0.151">
+    <system-out><![CDATA[INFO  1 source file to be analyzed
+DEBUG CompilationUnitTree : [
+  ClassTree
+    ModifiersTree
+    IdentifierTree
+    TypeParameters : [
+    VariableTree
+      ModifiersTree
+      PrimitiveTypeTree
+      IdentifierTree
+    MethodTree
+      ModifiersTree
+      TypeParameters
+      PrimitiveTypeTree
+      IdentifierTree
+      BlockTree
+    MethodTree
+      ModifiersTree
+      TypeParameters
+      PrimitiveTypeTree
+      IdentifierTree
+      BlockTree
+    MethodTree
+      ModifiersTree
+      TypeParameters
+      PrimitiveTypeTree
+      IdentifierTree
+      BlockTree
+    ]
+  ]
+
+INFO  1/1 source file has been analyzed
+]]></system-out>
+  </testcase>
+</testsuite>
